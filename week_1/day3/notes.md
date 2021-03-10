@@ -34,14 +34,14 @@
 
 - {"FavoriteColor": "Red"}
 
-# TRUTHY => look this up
+- TRUTHY => look this up
 
-# FALSY => look this up
+- FALSY => look this up
 
-# Will return True in the terminal
+- Will return True in the terminal
 
-# print(sumOfNumbers == 2)
+- print(sumOfNumbers == 2)
 
-# Invoking a function ()
+- Invoking a function ()
 
 print("Hello World")
