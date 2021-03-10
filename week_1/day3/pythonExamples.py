@@ -42,3 +42,4 @@ print("Hello World")
 print("My name is Zach")
 print(classSize)
 print(somethingToCallIt)
+variableNameThree = 3
