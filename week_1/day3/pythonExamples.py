@@ -13,6 +13,9 @@ sumOfNumbers = 1 + 1
 
 # Name, assignment operator (=), value that I am assigning
 variableName = True
+somethingToCallIt = ["students", 23, True]
+# This one will get printed to the console because its the reassigned value
+somethingToCallIt = {"helloPythonWorld": 23, "We are students": 24.5}
 
 # List, sequence of values followed by [value1, value2, etc]
 # [1, 2, 3]
@@ -38,3 +41,4 @@ variableName = True
 print("Hello World")
 print("My name is Zach")
 print(classSize)
+print(somethingToCallIt)
