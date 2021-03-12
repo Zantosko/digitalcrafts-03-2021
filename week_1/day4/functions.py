@@ -43,46 +43,46 @@
 
 # Function Practice
 
-# num_1 = int(input("enter a number > "))
-# operator = input("enter operand (+, -, *, /) > ")
-# num_2 = int(input("enter another number > "))
+num_1 = int(input("enter a number > "))
+operator = input("enter operand (+, -, *, /) > ")
+num_2 = int(input("enter another number > "))
 
 
-# def add(firstNumber, secondNumber):
-#     return print(firstNumber + secondNumber)
+def add(firstNumber, secondNumber):
+    return print(firstNumber + secondNumber)
 
 
-# def subtract(firstNumber, secondNumber):
-#     return print(firstNumber - secondNumber)
+def subtract(firstNumber, secondNumber):
+    return print(firstNumber - secondNumber)
 
 
-# def multiply(firstNumber, secondNumber):
-#     return print(firstNumber * secondNumber)
+def multiply(firstNumber, secondNumber):
+    return print(firstNumber * secondNumber)
 
 
-# def divide(firstNumber, secondNumber):
-#     return print(firstNumber / secondNumber)
+def divide(firstNumber, secondNumber):
+    return print(firstNumber / secondNumber)
 
 
-# while True:
-#     if operator == "+":
-#         add(num_1, num_2)
-#         exit(0)
-#     elif operator == "-":
-#         subtract(num_1, num_2)
-#         exit(0)
-#     elif operator == "*":
-#         multiply(num_1, num_2)
-#         exit(0)
-#     elif operator == "/":
-#         divide(num_1, num_2)
-#         exit(0)
-#     else:
-#         print("Input invalid, please restart")
+while True:
+    if operator == "+":
+        add(num_1, num_2)
+        exit(0)
+    elif operator == "-":
+        subtract(num_1, num_2)
+        exit(0)
+    elif operator == "*":
+        multiply(num_1, num_2)
+        exit(0)
+    elif operator == "/":
+        divide(num_1, num_2)
+        exit(0)
+    else:
+        print("Input invalid, please restart")
 
-#     num_1 = int(input("enter a number > "))
-#     operator = input("enter operand (+, -, *, /) > ")
-#     num_2 = int(input("enter another number > "))
+    num_1 = int(input("enter a number > "))
+    operator = input("enter operand (+, -, *, /) > ")
+    num_2 = int(input("enter another number > "))
 
 
 def start():
