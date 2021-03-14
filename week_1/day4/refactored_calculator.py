@@ -12,6 +12,7 @@ print(
 The first value should be a number
 The second value should be a operator (+, -, *, /)
 The third value should be another number
+Make sure to put spaces between your values!
 After this you will be prompted again to press '=' for the solution"""
 )
 
@@ -39,21 +40,23 @@ def division(a, b):
 operation = list(map(str, input("Enter 3 values here > ").split()))
 length = len(operation)
 
-
 while operation[0] != "q":
 
     while True:
-        if length > 3:
-            print("No more than 3 arguments")
+        if length != 3:
+            print("Inncorrect number of arguments")
             operation = list(map(str, input("> ").split()))
             length = len(operation)
+
+            if operation[0].lower() == "q":
+                quit()
         else:
             break
 
     while True:
         solution = None
         if operation[1] == "+":
-            solution = addition(int(operation[0]), int(operation[2]))
+            solution = addition(float(operation[0]), float(operation[2]))
             input_2 = input("Press '=' for solution > ")
             if input_2 == "=":
                 print(f"{operation[0]} + {operation[2]} = {solution}")
@@ -61,7 +64,7 @@ while operation[0] != "q":
             else:
                 print("Invalid input")
         elif operation[1] == "-":
-            solution = subtraction(int(operation[0]), int(operation[2]))
+            solution = subtraction(float(operation[0]), float(operation[2]))
             input_2 = input("Press '=' for solution > ")
             if input_2 == "=":
                 print(f"{operation[0]} - {operation[2]} = {solution}")
@@ -69,7 +72,7 @@ while operation[0] != "q":
             else:
                 print("Invalid input")
         elif operation[1] == "*":
-            solution = multiplication(int(operation[0]), int(operation[2]))
+            solution = multiplication(float(operation[0]), float(operation[2]))
             input_2 = input("Press '=' for solution > ")
             if input_2 == "=":
                 print(f"{operation[0]} * {operation[2]} = {solution}")
@@ -77,7 +80,7 @@ while operation[0] != "q":
             else:
                 print("Invalid input")
         elif operation[1] == "/":
-            solution = division(int(operation[0]), int(operation[2]))
+            solution = division(float(operation[0]), float(operation[2]))
             input_2 = input("Press '=' for solution > ")
             if input_2 == "=":
                 print(f"{operation[0]} / {operation[2]} = {solution}")
