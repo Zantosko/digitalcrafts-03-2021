@@ -1,5 +1,5 @@
 # This is a list
-pets = ["dog", "cat", "monke", "pikachu"]
+# pets = ["dog", "cat", "monke", "pikachu"]
 # Gets length of list
 # Length is counted normally
 # length = len(pets)
@@ -23,5 +23,17 @@ pets = ["dog", "cat", "monke", "pikachu"]
 # print(myFavoriteTwoAnimals)
 
 # If you start your index range with a negative, it starts from the end of the list, and then goes back however many times you want depending on the second number of the range.
-demonSpawns = pets[-3:-1]
-print(demonSpawns)
+# demonSpawns = pets[-3:-1]
+# print(demonSpawns)
+
+SIZE = 3
+board = []
+for y in range(SIZE):
+    board.append([])
+    for x in range(SIZE):
+        board[y].append(f"{y}, {x}")
+
+for row in board:
+    for column in row:
+        print(f"{column}  ", end="")
+    print("\n")
