@@ -1,0 +1,36 @@
+h1 {
+	color: navy;
+}
+
+body {
+	background-color: rgb(96, 118, 160);
+}
+
+.dateOfBirth {
+	color: red;
+}
+
+/* Classes don't have any special value in the browser but IDs do. So in this example when we assign different sizes to the same element, the browser chooses to use the id style. */
+.cityName {
+	font-size: 8px;
+}
+
+#city {
+	font-size: 30px;
+}
+
+/* Margin is the white space between the outside of a element's border and its parent container. */
+/* Padding is the white space between the inside of a element's border and the content contained within an element.  */
+.exampleWeAreGonnaUse {
+	background-color: red;
+	height: 200px;
+	width: 200px;
+	padding: 20px;
+}
+
+.paragraphInsideTheDiv {
+	background-color: maroon;
+	color: #fff;
+	margin: 10px;
+	padding: 20px;
+}

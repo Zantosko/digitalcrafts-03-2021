@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>CSS Intro</title>
+  <style>
+    /* Don't use style tags! Import CSS from a seperate value */
+    /* How to write CSS */
+    /* whatyouwanttotarget {
+      key: value;
+    } */
+    /* When you define CSS, you are defining what you want to target. If you target a specific element, it will affect every instance of that element */
+    /* h1 {
+      font-size: 3rem;
+    } */
+    /* If you make changes to the body, it will then affect everything inside of it. */
+    /* body {
+      background-color: cadetblue;
+      color: #333;
+    } */
+
+    /* Target a class of an element */
+    /* When targeting a class you use dot notation followed by the class name */
+    /* This will affect every instance of that class */
+    /* .nameHeader {
+      color: darkorange;
+    }
+    .dateOfBirth {
+      height: 50px;
+      border: darkred dotted 2px;
+      background-color: darkgoldenrod;
+    } */
+
+    /* Target an ID of an element */
+    /* #city {
+      font-style: italic;
+      font-size: 20px;
+    } */
+  </style>
+</head>
+<body>
+  <h1>CSS Intro</h1>
+  <p class="nameHeader">Zach Antosko</p>
+  <p class="dateOfBirth">Date of birth: ????</p>
+  <p class="cityName" id="city">Houston</p>
+  <h1>Second Header</h1>
+
+  <!-- Putting items in divs is a better way to manipulate content -->
+  <div class="exampleWeAreGonnaUse">
+    <p class="paragraphInsideTheDiv">I'm inside the div</p>
+  </div>
+</body>
+</html>
