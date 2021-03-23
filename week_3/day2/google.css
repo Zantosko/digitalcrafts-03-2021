@@ -3,6 +3,7 @@
 	padding: 0;
 	box-sizing: border-box;
 	font-family: "Roboto", sans-serif;
+	overflow: hidden;
 }
 
 nav {
@@ -67,8 +68,8 @@ img {
 
 .search-bar:focus {
 	outline: none;
-	border: darkgrey;
-	box-shadow: 1px 1px 1px 1px darkgrey;
+	border: darkgrey solid 1px;
+	box-shadow: 1px 0.5px 1px 0.5px #ccc;
 }
 
 .buttons {
