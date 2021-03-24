@@ -1,0 +1,48 @@
+/* Flexbox flexes the container element to rearrange the child elements */
+/* Flexbox takes care of vertical alignment. */
+/* Flexbox only affects the direct child, its not good to use multiple layers of divs */
+.basic-flex {
+	display: flex;
+}
+
+/* row is the default option */
+/* Row is left-to-right */
+/* Column is top-to-bottom */
+/* Reverse switches the order to be viewed the opposite way */
+/* row, row-reverse, column, column-reverse */
+.basic-flex-direction {
+	display: flex;
+	flex-direction: column;
+}
+
+/* no-wrap is the default option */
+/* no-wrap, wrap, wrap-reverse */
+/* if the browser can't fit all of the elements in the viewport then it will wrap them. */
+/* wrap-reverse wraps them to the top instead of to the bottom */
+.basic-flex-wrap {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+/* justify-content aligns items along the main axis */
+/* If the flex container isn't given a height and width then the size becomes dependent on the content inside of it */
+/* If flex-direction is row then the main axis is the x-axis */
+/* If flex-direction is column then the main axis is the y-axis */
+/* flex-end moves items to the end of the container and leaves white space on the left. Reverse items will do the opposite. */
+/* space-around creates white space around the items once the width exceeds the container */
+/* space-between is similar to space-around until a flex-wrap is given to the container. space-between will adjust items by adding an even amount of space between the items */
+.basic-flex-justify-content {
+	display: flex;
+	justify-content: space-between;
+}
+
+/* align-items aligns items along the cross axis */
+/* stretch is the default value */
+/* If flex-direction is row then the cross axis is the y-axis */
+/* If flex-direction is column then the cross axis is the x-axis */
+/* stretch moves the cross axis to the top of the container */
+/* center moves the cross axis to the center of the container */
+.basic-flex-align-items {
+	display: flex;
+	align-items: stretch;
+}
