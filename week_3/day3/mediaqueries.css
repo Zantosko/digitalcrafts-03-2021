@@ -1,0 +1,29 @@
+/* What are media queries */
+/* A media query is like a condition/if-statement and it will trigger when certain things happen on your webpage. */
+.navbar {
+	height: 40px;
+	background-color: grey;
+	padding: 5px;
+}
+
+.navbar a {
+	display: block;
+	text-align: center;
+	float: left;
+	padding: 10px 15px;
+	color: #fff;
+	text-decoration: none;
+}
+
+/* Max-Width: As long as the device has a screen and the width is not greater than 650px this will trigger */
+/* Min-Width: As long as the device has a screen and the width is greater than 650px this will trigger */
+@media screen and (max-width: 650px) {
+	.navbar {
+		height: 10rem;
+	}
+
+	.navbar a {
+		float: none;
+		width: 100%;
+	}
+}
