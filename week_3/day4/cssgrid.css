@@ -1,0 +1,122 @@
+* {
+	font-family: "Barlow Condensed", sans-serif;
+}
+
+:root {
+	--main-radius: 5px;
+	--main-padding: 10px;
+}
+
+body {
+	background-color: #efe7bc;
+	text-align: center;
+}
+
+.main-container {
+	display: grid;
+	height: 100vh;
+	/* Template */
+	/* grid-template-columns used to break up items into multiple columns */
+	/* auto-fill will continue to add columns in correlation to the screen size */
+	/* The unit fraction(fr) is used to take up the available space on the screen */
+	/* If you add multilple fr units then the column number will increase by the amount of fr's listed. The spcace is divided up depending on the fraction numbers */
+	/* 1fr is calculated by the amount of free space in the viewport. This is very useful for reponsive design */
+	/* grid-template-rows follows the same rules as grid-template-columns, the difference being the use of rows instead of columns */
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-rows: 0.2fr 1.5 1.2fr 0.8fr;
+	grid-template-areas:
+		"nav nav nav nav"
+		"sidebar main main main"
+		"sidebar content1 content2 content3"
+		"sidebar footer footer footer";
+	grid-gap: 0.4rem;
+	font-weight: 800;
+	text-transform: uppercase;
+	font-size: 20px;
+	color: #050a30;
+}
+
+nav {
+	grid-area: nav;
+	background-color: #4c5270;
+	border-radius: var(--main-radius);
+	padding-top: var(--main-padding);
+}
+
+main {
+	grid-area: main;
+	background-color: #36eee0;
+	border-radius: var(--main-radius);
+	padding-top: var(--main-padding);
+}
+
+#sidebar {
+	grid-area: sidebar;
+	background-color: #f652a0;
+	border-radius: var(--main-radius);
+	padding-top: var(--main-padding);
+}
+
+footer {
+	grid-area: footer;
+	background-color: #36eee0;
+	border-radius: var(--main-radius);
+	padding-top: var(--main-padding);
+}
+
+#content-div-1 {
+	grid-area: content1;
+	background-color: #4c5270;
+	border-radius: var(--main-radius);
+	padding-top: var(--main-padding);
+}
+
+#content-div-2 {
+	grid-area: content2;
+	background-color: #bcece0;
+	border-radius: var(--main-radius);
+	padding-top: var(--main-padding);
+}
+
+#content-div-3 {
+	grid-area: content3;
+	background-color: #f652a0;
+	border-radius: var(--main-radius);
+	padding-top: var(--main-padding);
+}
+
+@media only screen and (max-width: 700px) {
+	.main-container {
+		grid-template-columns: 1fr;
+		grid-template-rows: 0.4fr 0.4fr 2.2fr 1.2fr 1.2fr 1fr;
+		grid-template-areas:
+			"nav"
+			"sidebar"
+			"main"
+			"content1"
+			"content2"
+			"content3"
+			"footer";
+	}
+	nav,
+	main,
+	#sidebar,
+	footer,
+	#content-div-1,
+	#content-div-2,
+	#content-div-3 {
+		padding-bottom: 1rem;
+	}
+}
+
+/* Cornflower */
+/* #4C5270 */
+
+/* Hot Pink */
+/* #F652A0 */
+
+/* Cyan */
+/* #36EEE0 */
+
+/* Tiffany Blue */
+/* #BCECE0 */
