@@ -1,0 +1,165 @@
+/* Task 1 */
+/* .container {
+	display: grid;
+	height: 50vh;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(2, 1fr);
+	grid-template-areas:
+		"column1 column2 column3"
+		"column4 column5 column6";
+	grid-gap: 5px;
+	height: 120px;
+	width: 360px;
+}
+
+body {
+	background-color: linen;
+}
+
+#column1 {
+	grid-area: column1;
+	background-color: aquamarine;
+}
+
+#column2 {
+	grid-area: column2;
+	background-color: green;
+}
+
+#column3 {
+	grid-area: column3;
+	background-color: blueviolet;
+}
+
+#column4 {
+	grid-area: column4;
+	background-color: gold;
+}
+
+#column5 {
+	grid-area: column5;
+	background-color: crimson;
+}
+
+#column6 {
+	grid-area: column6;
+	background-color: lightsalmon;
+} */
+
+/* Task 2 */
+/* .container2 {
+	display: grid;
+	height: 50vh;
+	grid-template-columns: repeat(5, 1fr);
+	grid-template-rows: repeat(2, 1fr);
+	grid-template-areas:
+		"column column2 column3"
+		"column4 column5 column6";
+	grid-gap: 5px;
+	height: 80px;
+	width: 250px;
+}
+
+#column7 {
+	background-color: springgreen;
+}
+
+#column8 {
+	background-color: slateblue;
+}
+
+#column9 {
+	background-color: skyblue;
+}
+
+#column10 {
+	background-color: silver;
+}
+
+#column11 {
+	background-color: lightseagreen;
+}
+
+#column12 {
+	background-color: darkolivegreen;
+}
+
+#column13 {
+	background-color: lightpink;
+}
+
+#column14 {
+	background-color: darkorange;
+}
+
+#column15 {
+	background-color: darkturquoise;
+}
+
+#column16 {
+	background-color: darkseagreen;
+} */
+
+/* Task 3 parts 1, 2, 3 */
+body {
+	background-color: azure;
+}
+
+.container3 {
+	height: 100vh;
+	display: grid;
+	grid-template-columns: 0.5fr repeat(4, 1fr);
+	grid-template-rows: 0.5fr repeat(2, 1fr) 0.5fr;
+	grid-template-areas:
+		"sidebar header header header add-box"
+		"sidebar content1 content2 content3 add-box"
+		"sidebar content1 content2 content3 add-box"
+		"sidebar footer footer footer add-box";
+	grid-gap: 5px;
+	text-align: center;
+}
+
+header {
+	grid-area: header;
+	background-color: #b4f8c8;
+}
+
+#sidebar {
+	grid-area: sidebar;
+	background-color: #ffaebc;
+}
+
+#content1 {
+	grid-area: content1;
+	background-color: #aad6a0;
+}
+#content2 {
+	grid-area: content2;
+	background-color: #a0e7e5;
+}
+#content3 {
+	grid-area: content3;
+	background-color: #fbe7c6;
+}
+
+#add-box {
+	grid-area: add-box;
+	background-color: cadetblue;
+}
+
+footer {
+	grid-area: footer;
+	background-color: #dcbaa9;
+}
+
+/* Hot Pink
+#FFAEBC
+
+Tiffany Blue
+#A0E7E5
+
+Mint
+#B4F8C8
+
+Yellow
+#FBE7C6 */
