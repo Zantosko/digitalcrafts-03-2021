@@ -1,18 +1,17 @@
-let chessboard = [];
+let chessboard = "";
 
-// for (let white of chessboard) {
-//   white = "white";
-//   chessboard.push(white);
-//   console.log(chessboard)
-// }
-
-// for (let white of range(1, 9)) {
-//   white = " "
-//   chessboard.push(white)
-// }
-
-for (let i = 0; i <= 8; i++) {
-  i = " "
+for (i = 0; i < 8; i++) {
+  for (j = 0; j < 8; j++) {
+    if ((i + j) % 2 == 0) {
+      console.log("divisible by two", i);
+      chessboard += " ";
+    }
+    else {
+      console.log("not divisible by two", j);
+      chessboard += "#";
+    }
+  }
+  chessboard += "\n"
 }
 
 console.log(chessboard)
