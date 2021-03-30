@@ -75,3 +75,9 @@ console.log(dantesHashOfInferno.level1.contents[15])
 console.log(dantesHashOfInferno.level3.contents[0].tower[0])
 console.log(dantesHashOfInferno.level5.contents[0].reeeeeee[1].anger)
 console.log(dantesHashOfInferno.level9.contents[0].tower[0].reeeeeee[1].secret[0].theSecretIs)
+
+// Alternate way to access values
+console.log(dantesHashOfInferno["level1"]["contents"][15])
+console.log(dantesHashOfInferno["level3"]["contents"][0]["tower"][0])
+console.log(dantesHashOfInferno["level5"]["contents"][0]["reeeeeee"][1]["anger"])
+console.log(dantesHashOfInferno["level9"]["contents"][0]["tower"][0]["reeeeeee"][1]["secret"][0]["theSecretIs"])
