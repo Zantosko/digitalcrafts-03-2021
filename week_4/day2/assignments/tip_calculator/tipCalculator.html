@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="tipCalculator.css">
+  <title>Tip Calculator</title>
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <h1>Tip Calculator</h1>
+      <div class="bill-container">
+        <label for="">Bill Amount $</label>
+        <br>
+        <input type="text" class="bill mt">
+      </div>
+      <br>
+      <div class="tip-container">
+        <label for="">Tip Percentage %</label>
+        <br>
+        <input type="text" class="tip mt">
+      </div>
+      <br>
+      <button class="button">Calculate</button>
+      <h3 class="amount">Tip Amount $</h3>
+      <div class="amount-container box"></div>
+      <br>
+      <div class="history-container">
+        <h3>Tip History</h3>
+        <div class="history box"></div>
+      </div>
+      
+    </div>
+    
+  </div>
+
+  <script src="tipCalculator.js"></script>
+</body>
+</html>
