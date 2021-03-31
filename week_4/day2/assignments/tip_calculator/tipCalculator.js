@@ -17,10 +17,11 @@ function calculation() {
 
     let tipAmount = Number(bill.value) * (Number(tip.value) / 100);
 
-    tipContainer.innerHTML = tipAmount.toFixed(2);
+    let totalBill = tipAmount + Number(bill.value);
+    tipContainer.innerHTML = totalBill.toFixed(2);
 
     const li = document.createElement("li");
-    li.append(tipAmount.toFixed(2));
+    li.append(totalBill.toFixed(2));
     ul.append(li);
     tipHistory.append(ul);
   } 
