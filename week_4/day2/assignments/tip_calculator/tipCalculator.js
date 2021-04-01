@@ -1,4 +1,4 @@
-const bill = document.querySelector(".bill");
+let bill = document.querySelector(".bill");
 const tip = document.querySelector(".tip");
 const calcButton = document.querySelector(".button");
 const tipContainer = document.querySelector(".amount-container");
@@ -29,7 +29,7 @@ const calculation = () => {
 
 const validate = (input) => {
   myRegex = /(\d+(?:\.\d+)?)/;
-  return myRegex.test(input)
+  return myRegex.test(input);
 }
 
 calcButton.addEventListener("click", calculation)
