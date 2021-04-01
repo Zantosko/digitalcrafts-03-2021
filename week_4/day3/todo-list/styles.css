@@ -1,0 +1,26 @@
+ul {
+	list-style: none;
+	margin-top: 1rem;
+}
+
+.note-container {
+	display: inline;
+}
+
+li {
+	display: flex;
+	justify-content: space-between;
+}
+
+button {
+	display: inline;
+}
+
+#button {
+	background-color: #2e8bc0;
+	border: none;
+}
+
+#button:focus {
+	outline: none;
+}
