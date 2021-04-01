@@ -12,7 +12,7 @@ const calculation = () => {
   if (billAmount === "" || tipPercentage === "") {
     alert("Please fill out the required fields");
     location.reload();
-    
+
   } else {
     if (!validate(billAmount) || !validate(tipPercentage)) {
       alert("Please input numbers only!!");
@@ -30,7 +30,6 @@ const calculation = () => {
       tipHistory.append(ul);
     }
   }
-  
 }
 
 const validate = (input) => {
