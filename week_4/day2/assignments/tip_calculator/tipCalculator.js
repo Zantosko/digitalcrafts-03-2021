@@ -6,23 +6,30 @@ const tipHistory = document.querySelector(".history");
 
 const ul = document.createElement("ul");
 
-calcButton.addEventListener("click", calculation)
+const calculation = () => {
+  let billAmount = bill.value;
+  let tipPercentage = tip.value;
 
-function calculation() {
-  if (isNaN(bill.value) || isNaN(tip.value)) {
-    alert("Please input numbers only!!")
-    location.reload()
+  if (!validate(billAmount) || !validate(tipPercentage)) {
+    alert("Please input numbers only!!");
+    location.reload();
 
   } else {
+    let tipAmount = Number(billAmount) * (Number(tipPercentage) / 100);
 
-    let tipAmount = Number(bill.value) * (Number(tip.value) / 100);
-
-    let totalBill = tipAmount + Number(bill.value);
+    let totalBill = tipAmount + Number(billAmount);
     tipContainer.innerHTML = totalBill.toFixed(2);
 
     const li = document.createElement("li");
     li.append(totalBill.toFixed(2));
     ul.append(li);
     tipHistory.append(ul);
-  } 
+  }
 }
+
+const validate = (input) => {
+  myRegex = /(\d+(?:\.\d+)?)/;
+  return myRegex.test(input)
+}
+
+calcButton.addEventListener("click", calculation)
