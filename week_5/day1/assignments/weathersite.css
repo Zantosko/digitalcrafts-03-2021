@@ -1,0 +1,96 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Bebas Neue", cursive;
+}
+
+body {
+	background: url("./assets/daytime.png") center center/cover;
+}
+
+h1 {
+	margin-bottom: 2rem;
+	font-size: 3.2rem;
+}
+
+p {
+	font-size: 20px;
+}
+
+.root {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	width: 100vw;
+}
+
+.card {
+	padding: 4rem;
+	border-radius: 10px;
+	width: 50vw;
+}
+
+.card-1 {
+	background: #fff;
+	position: relative;
+	z-index: 1;
+	top: 4rem;
+	text-align: center;
+}
+
+.card-2 {
+	color: azure;
+	background: rgba(0, 0, 0, 0.7);
+	visibility: hidden;
+	margin-top: 2rem;
+}
+
+.zip {
+	border: none;
+	border-bottom: black solid 1px;
+	height: 2rem;
+	width: 100%;
+	font-size: 23px;
+	background: #fff;
+}
+
+.zip:focus {
+	outline: none;
+	background: #fff;
+}
+
+.btn {
+	width: 100%;
+	padding: 0.8rem 0;
+	font-size: 22px;
+	background: #feb06a;
+	border: none;
+	border-radius: 5px;
+	margin-top: 1rem;
+}
+
+.btn:hover {
+	cursor: pointer;
+}
+
+.btn:focus {
+	outline: none;
+}
+
+.temp {
+	font-size: 3rem;
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	padding-top: 1.5rem;
+}
+
+img {
+	width: 120px;
+	margin-left: 2.5rem;
+}
