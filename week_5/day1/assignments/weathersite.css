@@ -5,8 +5,12 @@
 	font-family: "Bebas Neue", cursive;
 }
 
-body {
+.day {
 	background: url("./assets/daytime.png") center center/cover;
+}
+
+.night {
+	background: url("./assets/nighttime.png") center center/cover;
 }
 
 h1 {
@@ -15,7 +19,7 @@ h1 {
 }
 
 p {
-	font-size: 20px;
+	font-size: 25px;
 }
 
 .root {
@@ -51,9 +55,9 @@ p {
 .zip {
 	border: none;
 	border-bottom: black solid 1px;
-	height: 2rem;
+	height: 2.5rem;
 	width: 100%;
-	font-size: 23px;
+	font-size: 25px;
 	background: #fff;
 }
 
@@ -81,7 +85,7 @@ p {
 }
 
 .temp {
-	font-size: 3rem;
+	font-size: 3.2rem;
 }
 
 .grid {
@@ -93,4 +97,74 @@ p {
 img {
 	width: 120px;
 	margin-left: 2.5rem;
+}
+
+@media (max-width: 700px) {
+	h1 {
+		font-size: 25px;
+		margin-bottom: 0.5rem;
+	}
+
+	.card {
+		height: 310px;
+		width: 250px;
+	}
+
+	.zip {
+		font-size: 15px;
+	}
+
+	.btn {
+		font-size: 15px;
+	}
+
+	.grid {
+		display: block;
+		padding-bottom: rem;
+	}
+
+	.temp {
+		font-size: 22px;
+	}
+
+	.img {
+		width: 10px;
+		height: 10px;
+		text-align: center;
+	}
+}
+
+@media (min-width: 1224px) {
+	h1 {
+		font-size: 4rem;
+	}
+
+	p {
+		font-size: 30px;
+	}
+
+	.card {
+		width: 60vw;
+	}
+
+	.card-2 {
+		text-align: center;
+	}
+
+	.zip {
+		font-size: 33px;
+		height: 45px;
+	}
+
+	.btn {
+		font-size: 28px;
+	}
+
+	.temp {
+		font-size: 4.5rem;
+	}
+
+	img {
+		width: 150px;
+	}
 }
