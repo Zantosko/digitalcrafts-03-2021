@@ -10,9 +10,27 @@
 
 
 const fetchPokemon = async () => {
-  let response = await fetch("https://pokeapi.co/api/v2/pokemon?&limit=5")
+  let response = await fetch("https://pokeapi.co/api/v2/pokemon?&limit=151")
   console.log(response);
 
   let convertResponse = await response.json()
+  console.log(convertResponse)
+
+  const nameOfPokemon = document.querySelector(".pokemon")
+  const div = document.createElement("div")
+  let counter = 1;
+  for (let pokemon of convertResponse.results) {
+    const h3 = document.createElement("h3")
+    const img = document.createElement("img")
+    img.height = "100";
+    img.width = "100";
+    img.src = `https://pokeres.bastionbot.org/images/pokemon/${counter}.png`
+    h3.append(pokemon.name)
+    div.append(h3, img)
+    nameOfPokemon.append(div)
+    counter += 1
+  }
 }
-fetchPokemon()
+
+const submit = document.querySelector("button")
+submit.addEventListener("click", fetchPokemon)
