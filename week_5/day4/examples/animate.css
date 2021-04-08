@@ -1,0 +1,27 @@
+body {
+	height: 100vh;
+}
+
+.container {
+	width: 400px;
+	height: 400px;
+	background: navy;
+}
+
+.ball {
+	position: relative;
+	width: 100px;
+	height: 100px;
+	background-color: red;
+	border-radius: 50%;
+	animation: bounce 1s ease-out 0s;
+}
+
+@keyframes bounce {
+	to {
+		top: 0;
+	}
+	from {
+		top: 320px;
+	}
+}
