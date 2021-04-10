@@ -7,6 +7,13 @@ const uniqSort = (arr) => {
   return arr.sort((a, b) => a - b);
 }
 
+const cache = {}
+const anagram = (str1, str2) => {
+  newStr1 = str1.replace(/[^\w]/g, "").toLowerCase()
+  newStr2 = str2.replace(/[^\w]/g, "").toLowerCase()
+
+}
+
 
 //? Memoization Exercise
 // Write a function, times10 that takes an argument "n" and multiples "n" times 10.
