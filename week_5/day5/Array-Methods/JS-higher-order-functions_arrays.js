@@ -107,14 +107,64 @@ const agesSquareTimesTwo = ages
 console.log(agesSquareTimesTwo)
 
 
-//? sort() - Can organize array items by alphabetical or chronological order.
+//? sort() - Can organize array items by alphabetical or chronological order. This can be switched between ascending and descending order.
 
-const sortedCompanies = companies.sort(function(c1, c2) {
-  if(c1.start > c2.start) {
-    return 1;
-  } else {
-    return -1;
-  }
-});
+//todo Example 1 - Sorts companies by start date
 
-//? reduce()
+// ES5 Version
+// const sortedCompanies = companies.sort(function(c1, c2) {
+//   if(c1.start > c2.start) {
+//     return 1;
+//   } else {
+//     return -1;
+//   }
+// });
+
+// ES6 Version
+const sortedCompanies = companies.sort((a, b) => (a.start > b.start ? 1 : -1));
+console.log(sortedCompanies)
+
+//todo Example 2 - Sorts ages in order
+
+const sortAgesAscending = ages.sort((a, b) => a - b)
+console.log(sortAgesAscending)
+
+const sortAgesDescending = ages.sort((a, b) => b - a)
+console.log(sortAgesDescending)
+
+
+//? reduce() - 
+
+//todo Example 1 - Gets the sum of all ages
+
+// let ageSum = 0;
+// for (let i = 0; i < ages.length; i++) {
+//   ageSum += ages[i];
+// }
+
+const ageSum = ages.reduce((total, age) => total + age, 0)
+
+console.log(ageSum);
+
+//todo Example 2 - Gets total years for all companies
+
+// ES5 Version
+// const totalYears = companies.reduce(function(total, company) {
+//   return total + (company.end - company.start);
+// }, 0);
+
+// ES6 Version
+const totalYears = companies.reduce((total, company) => total + (company.end - company.start), 0);
+
+console.log(totalYears)
+
+
+//* Combining Higher Order Functions
+
+const combined = ages 
+  .map(age => age * 2)
+  .filter(age => age >= 40)
+  .sort((a, b) => a - b)
+  .reduce((a, b) => a + b, 0);
+
+console.log(combined)
