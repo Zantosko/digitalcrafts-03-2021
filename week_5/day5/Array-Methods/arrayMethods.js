@@ -17,7 +17,7 @@ console.log(`%cMapped Array`, `${color()}`, mappedArray1);
 // This method lets you return a new array, and fills that new array with only the elements that match what you specify (aka, the new array is filtered to only include)
 // This is like an if-statement for arrays
 const array2 = ["Joey", "Tay", "Tyler", "Christian"];
-const filteredArray2 = array2.filter((element) => element === "Joey");
+const filteredArray2 = array2.filter((element) => element === "Tay");
 console.log(`%cFiltered Array`, `${color()}`, filteredArray2);
 
 //? .sort
@@ -33,7 +33,7 @@ console.log(`%cSorted Array`, `${color()}`, sortedArray3);
 console.log(`%cSorted Array`, `${color()}`, sortedArray4);
 
 //? .includes
-// This methods checks if the array includes the elements that pass the condition.  It only returns true or false
+// This methods checks if the array includes the elements that pass the condition. It only returns true or false.
 
 const array5 = ["Joey", "Tay", "Tyler", "Christian"];
 console.log(`%cInclude in the Array`, `${color()}`, array5.includes("Joey"));
