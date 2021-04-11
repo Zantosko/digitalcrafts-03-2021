@@ -133,7 +133,7 @@ const sortAgesDescending = ages.sort((a, b) => b - a)
 console.log(sortAgesDescending)
 
 
-//? reduce() - 
+//? reduce() - Executes the callback once for each assigned value present in the array. It can be used to: Get the sum of all values in the array, sum of values in an object array, flatten an array of arrays, count instances of values in an object, group objects by a property, bond arrays contained within an array of objects using the spread operator(...) and initialValue, remove duplicate items in an array, can be used to replace .filter().map() items in an array.
 
 //todo Example 1 - Gets the sum of all ages
 
