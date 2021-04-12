@@ -40,7 +40,7 @@ console.log(`%cInclude in the Array`, `${color()}`, array5.includes("Joey"));
 console.log(`%cInclude in the Array`, `${color()}`, array5.includes("Joe"));
 
 //? .reduce
-// This method applies some desired effect against an accumulator (aka, the total amount of the elements it's applied the effect to, and reduces it to a single effect)
+// This method applies some desired effect against an accumulator (aka, the total amount of the elements it's applied the effect to, and reduces it to a single effect).
 const array6 = [1, 2, 3, 4, 5, 6, 2020];
 const reducedArray = array6.reduce(
   (total, currentElement) => total + currentElement
@@ -54,7 +54,7 @@ const foundYou = array7.find((element) => element > 200);
 console.log(`%cFind Array`, `${color()}`, foundYou);
 
 //? .findIndex
-// Similar to find, this just finds the first element that passes your condition and lets you know what index it is
+// Similar to find, this just finds the first element that passes your condition and lets you know what index it is.
 const array8 = [1, 2, 3, 4, 5, 6, 2020];
 const foundIndex = array8.findIndex((element) => element === 4);
 console.log(`%cFind Array`, `${color()}`, foundIndex);
