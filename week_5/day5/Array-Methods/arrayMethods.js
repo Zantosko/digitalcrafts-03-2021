@@ -9,7 +9,7 @@ const color = () => {
 //? .map
 // This method creates a new array, and allows you to do something to each element in the array
 // This method is good for when you want to return values after you mutate them. One of the most used methods.
-const array1 = ["Joey", "Zach, "Tyler", "Christian"];
+const array1 = ["Joey", "Zach", "Tyler", "Christian"];
 const mappedArray1 = array1.map((name) => name + " " + "developer");
 console.log(`%cMapped Array`, `${color()}`, mappedArray1);
 
