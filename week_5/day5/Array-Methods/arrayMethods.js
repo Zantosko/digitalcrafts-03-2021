@@ -16,15 +16,15 @@ console.log(`%cMapped Array`, `${color()}`, mappedArray1);
 //? .filter
 // This method lets you return a new array, and fills that new array with only the elements that match what you specify (aka, the new array is filtered to only include)
 // This is like an if-statement for arrays
-const array2 = ["Joey", "Tay", "Tyler", "Christian"];
-const filteredArray2 = array2.filter((element) => element === "Tay");
+const array2 = ["Joey", "Zach", "Tyler", "Christian"];
+const filteredArray2 = array2.filter((element) => element === "Zach");
 console.log(`%cFiltered Array`, `${color()}`, filteredArray2);
 
 //? .sort
 // This method will sort an arrays elements in ascending or descending order
 
-const array3 = ["Joey", "Tay", "Tyler", "Christian"];
-const array4 = ["Joey", "Tay", "Tyler", "Christian"];
+const array3 = ["Joey", "Zach", "Tyler", "Christian"];
+const array4 = ["Joey", "Zach", "Tyler", "Christian"];
 // ascending
 const sortedArray3 = array3.sort((a, b) => (a > b ? 1 : -1));
 // descending
@@ -35,7 +35,7 @@ console.log(`%cSorted Array`, `${color()}`, sortedArray4);
 //? .includes
 // This methods checks if the array includes the elements that pass the condition. It only returns true or false.
 
-const array5 = ["Joey", "Tay", "Tyler", "Christian"];
+const array5 = ["Joey", "Zach", "Tyler", "Christian"];
 console.log(`%cInclude in the Array`, `${color()}`, array5.includes("Joey"));
 console.log(`%cInclude in the Array`, `${color()}`, array5.includes("Joe"));
 
