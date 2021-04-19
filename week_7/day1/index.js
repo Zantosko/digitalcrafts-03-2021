@@ -29,20 +29,45 @@ CREATE TABLE gamer(
 )
 */
 
-console.log("hi");
+// console.log("hi");
 
 //* Boiler Plate for creating Node server
 
 const http = require("http");
+const express = require("express")
+const app = express()
 const address = "127.0.0.1";
 const PORT = 3002;
+// fs stands for File System, used to read files for Node
+// This type of syntax is called destructuring (introduced in ES6). It's shorthand for Dot Notation.
+const { readFile } = require("fs")
+app.use(express.json())
 
-const server = http.createServer((req,res) => {
-  res.statusCode = 200;
-  res.setHeader("Content-Type", "text/plain");
-  res.end("hello");
+// const server = http.createServer((req,res) => {
+//   console.log(req.url)
+//   res.statusCode = 200;
+//   res.setHeader("Content-Type", "text/plain");
+//   res.end("hello");
+// })
+
+// server.listen(PORT, address, () => {
+//   console.log(`server is running on http://${address}:${PORT}`);
+// });
+
+//* Server using Express
+// Express makes it easier to write Node servers by taking out all the boiler you have to write.
+app.get("/", (req,res) => {
+  readFile("./index.html","utf8",(err, html) => {
+    res.send(html);
+  })
+  // res.end("Hello")
 })
 
-server.listen(PORT, address, () => {
-  console.log(`server is running on http://${address}:${PORT}`);
-});
+app.get("/doge", (req,res) => {
+  const userName = { user: "joe" }
+  res.send(userName)
+})
+
+app.listen(PORT,() => {
+  console.log(`Your server is running on ${PORT}`)
+})
