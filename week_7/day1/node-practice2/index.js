@@ -4,23 +4,36 @@ const PORT = 3001
 const { readFile } = require("fs")
 
 app.get("/",(req,res) => {
-  res.send("You just made a Node server")
+  // res.send("You just made a Node server")
+  readFile("./views/main.html","utf8",(err,html) => {
+    res.send(html)
+  });
 });
 
 app.get("/home",(req,res) => {
-  res.send("Home")
+  readFile("./views/home.html","utf8",(err,html) => {
+    res.send(html)
+  });
 });
 
 app.get("/about",(req,res) => {
-  res.send("About")
+  readFile("./views/about.html","utf8",(err,html) => {
+    res.send(html)
+  });
 });
 
 app.get("/faq",(req,res) => {
-  res.send("FAQ")
+  readFile("./views/faq.html","utf8",(err,html) => {
+    res.send(html)
+  });
 });
 
 app.post("/messages",(req,res) => {
-  res.send("message")
+
+  const {name,logo} = req.body
+
+  const message = `This is a message with ${name} and ${logo}`
+  res.send(message)
 });
 
 app.get("*",(req,res) => {
