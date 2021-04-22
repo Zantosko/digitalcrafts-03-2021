@@ -41,7 +41,7 @@ app.get("/read_todos", async (req,res) => {
 app.get("/read_todos/:id", async (req,res) => {
   try {
     const { id } = req.params;
-    const readSingleTodoFromDB = await pool.query("SELECT * FROM todo")
+    const readSingleTodoFromDB = await pool.query("SELECT * FROM todo WHERE todo_id = ($1)",[id])
     res.json(readSingleTodoFromDB)
   } catch(err) {
     console(err.message)
