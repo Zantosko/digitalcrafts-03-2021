@@ -32,7 +32,7 @@ app.post("/todo", async (req,res) => {
 app.get("/read_todos", async (req,res) => {
   try {
     const readTodosFromDB = await pool.query("SELECT * FROM todo")
-    res.json(readTodosFromDB)
+    res.json(readTodosFromDB.rows[0])
   } catch(err) {
     console(err.message)
   }
@@ -49,10 +49,35 @@ app.get("/read_todos/:id", async (req,res) => {
 })
 
 //? update todolist
+app.put("/update_todos/:id", async (req,res) => {
+  try {
 
+  } catch(err) {
+    console.log(err)
+  }
+
+  const { id } = req.params;
+  const {description} = req.body
+
+  const updateSingleTodoFromDB = await pool.query("UPDATE todo SET description = $1 WHERE todo_id = $2",[description,id])
+  
+  res.json(updateSingleTodoFromDB)
+
+})
 
 //? delete todolist
+app.delete("/delete_todo/:id", async (req,res) => {
+  try {
 
+    const {id} = req.params;
+    const deleteTodoInDB = await pool.query("DELETE FROM todo WHERE todo_id = $1",[id])
+  
+    res.json("Todo was successfully deleted")
+  } catch(err) {
+    console.log(err)
+  }
+
+})
 
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`)
