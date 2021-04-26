@@ -4,7 +4,7 @@ const mustacheExpress = require("mustache-express");
 const path = require("path");
 const cors = require("cors");
 // const pool = require("./db.js");
-const frontEnd = require("./js/app")
+// const frontEnd = require("./js/app")
 
 const port = process.env.PORT || 3014;
 const VIEWS_PATH = path.join(__dirname, "/views");

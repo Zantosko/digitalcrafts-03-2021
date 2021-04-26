@@ -1,8 +1,8 @@
-const express = require("express");
-const router = express.Router();
+// const express = require("express");
+// const router = express.Router();
 
-router.post("/", async (req,res) => {
-  await res.send("clicked")
-})
+// router.post("/", async (req,res) => {
+//   await res.send("clicked")
+// })
 
-module.exports = router
+// module.exports = router
