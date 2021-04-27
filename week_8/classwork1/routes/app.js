@@ -36,7 +36,6 @@ router.post("/delete_item", async (req,res) => {
   try {
 
     let { info_id } = req.body;
-    console.log(info_id)
     await pool.query("DELETE FROM info WHERE info_id = $1",[info_id]);
     res.redirect("/view_data")
 
@@ -49,7 +48,6 @@ router.post("/delete_item", async (req,res) => {
 // Takes you to specific edit page based on item selected
 router.get("/edit_item/:info_id", async (req,res) => {
   let { info_id } = req.params;
-  console.log(info_id)
   let data = await pool.query("SELECT info_id,first_name,last_name,email FROM info WHERE info_id = $1",[info_id]);
   console.log(data)
   
