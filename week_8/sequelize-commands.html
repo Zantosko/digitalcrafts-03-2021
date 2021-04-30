@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+        <title>Command Maker</title>
+    </head>
+    <style>
+    * {
+        box-sizing: border-box;
+        font-family: 'Open Sans', sans-serif;
+
+    }
+
+    body {
+        
+        margin: 0;
+        width: 100vw;
+        height: 100vh;
+        background: linear-gradient(135deg, #06beb6, white);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    .command-bar {
+        margin-top: 2em;
+        display: flex;
+    }
+
+    .command-button {
+        border: 1px solid black;
+    }
+    
+    .add-attribute {
+        background: #81C4ff;
+    }
+    .remove-attribute {
+        background: #16588e;
+    }
+    .create-command {
+        background: #E7222e;
+    }
+
+    .command-button {
+        cursor: pointer;
+        margin: 0.4em;
+        padding: 1em;
+        flex: 1;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 1px 1px 3px 1px gray;
+    }
+
+    .myForm {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .attribute-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 3em;
+    }
+    .heading-container {
+        display: flex;
+        justify-content: space-evenly;
+        width: 100%;
+        height: 3em;
+    }
+
+    .result-box {
+        border: 1px solid black;
+        box-shadow: 1px 1px 3px 1px grey;
+        padding: 1em;
+        background: white;
+        text-align: center;
+    }
+</style>
+<body>
+    <div class="command-bar">    
+        <div class="add-attribute command-button">Add Attribute</div>
+        <div class="remove-attribute command-button">Remove Attribute</div>
+        <div class="create-command command-button">Create the command</div>
+    </div>
+
+    <form action="" class="myForm">
+        <h3>Model Name</h3>
+        <input type="text" name="" id="model-name">
+
+        
+        <div class="attribute-container">
+            <div class="heading-container">
+                <h3>Attribute</h3>
+                <h3>Datatype</h3>
+            </div>
+        </div>
+
+
+
+    </form>
+<script>
+    const addAttribute = document.querySelector('.add-attribute');
+    const removeAttribute = document.querySelector('.remove-attribute');
+    const createButton = document.querySelector('.create-command');
+
+    async function appendNewAttributePair(){
+        const attributeContainer = document.querySelector('.attribute-container');
+        const attributeCouple = document.createElement('div');
+        attributeCouple.setAttribute('class', 'attribute-couple');
+
+        for(i=0;i<2;i++){
+            let input = document.createElement('input');
+            input.classList.add('input');
+            attributeCouple.append(input);
+        }
+
+        await attributeContainer.append(attributeCouple)
+
+    }
+
+    function removeAttributePair(){
+        const lastPair = document.querySelector('.attribute-couple:last-of-type');
+        document.querySelector('.attribute-container').lastElementChild.remove();
+
+    }
+
+    function chunkify(array){
+        const chunks = Array.from({
+            length: array.length/2
+            }, (_, i) => {
+                const start = 2 * i; 
+                return array.slice(start, start + 2)
+                }); 
+
+        return chunks
+    }
+
+
+    function createCommand(){
+        const body = document.querySelector('body');
+        const startOfCommand = 'npx sequelize-cli model:generate --name ';
+        const modelName = document.getElementById('model-name').value;
+        const attributeKey = ' --attributes ' 
+        const inputValues = document.querySelectorAll('.input');
+        let array = [];
+        inputValues.forEach(input => {
+            if(input.value){
+                array.push(input.value)
+            }
+        })
+
+        const attributePairs = chunkify(array)
+                            .map(chunk => chunk.join(':'))
+                            .join(',')
+                            .toString();
+
+        
+        const commandString = startOfCommand + modelName + attributeKey + attributePairs;
+
+        const commandOutput = document.createElement('div');
+        commandOutput.classList.add('result-box');
+        commandOutput.innerText = commandString;
+        body.append(commandOutput);
+    }
+
+    addAttribute.addEventListener('click', appendNewAttributePair)
+    removeAttribute.addEventListener('click', removeAttributePair);
+    createButton.addEventListener('click', createCommand)
+    document.addEventListener('keydown', (e) => {
+        if(e.key === 'Enter'){
+            createCommand();
+        }
+    })
+
+    appendNewAttributePair()
+    
+    
+
+</script>
+</body>
+</html>
