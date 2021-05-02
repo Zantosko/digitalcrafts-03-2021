@@ -11,15 +11,6 @@ module.exports = {
       Date: {
         type: Sequelize.DATE
       },
-      PatientId: {
-        type: Sequelize.INTEGER,
-        onDelete: 'CASCADE',
-        references: {
-                model: 'Patients',
-                key: 'id',
-                as: 'PatientId'
-        }
-      },
       DoctorId: {
         type: Sequelize.INTEGER,
         onDelete: 'CASCADE',
@@ -27,6 +18,15 @@ module.exports = {
                 model: 'Doctors',
                 key: 'id',
                 as: 'DoctorId'
+        }
+      },
+      PatientId: {
+        type: Sequelize.INTEGER,
+        onDelete: 'CASCADE',
+        references: {
+                model: 'Patients',
+                key: 'id',
+                as: 'PatientId'
         }
       },
       createdAt: {

@@ -14,7 +14,7 @@ module.exports = (sequelize, DataTypes) => {
         foreignKey: "DoctorId",
         onDelete: "CASCADE"
       });
-      
+
       Appointment.belongsTo(models.Patient, {
         foreignKey: "PatientId",
         onDelete: "CASCADE"
@@ -23,8 +23,8 @@ module.exports = (sequelize, DataTypes) => {
   };
   Appointment.init({
     Date: DataTypes.DATE,
-    PatientId: DataTypes.INTEGER,
-    DoctorId: DataTypes.INTEGER
+    DoctorId: DataTypes.INTEGER,
+    PatientId: DataTypes.INTEGER
   }, {
     sequelize,
     modelName: 'Appointment',
