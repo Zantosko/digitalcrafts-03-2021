@@ -26,7 +26,7 @@ const users = [];
 
 // Middleware
 // requires static files
-app.use("/public",express.static("css"));
+app.use("../public",express.static("css"));
 app.use(express.json());
 app.use(cors());
 app.use(flash());
