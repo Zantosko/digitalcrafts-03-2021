@@ -1,0 +1,40 @@
+.App {
+	height: 100vh;
+	display: grid;
+	grid-template-columns: 0.1fr 1fr;
+	grid-template-rows: 0.1fr 1fr;
+	grid-template-areas:
+		"sidebar navbar"
+		"sidebar about-container";
+	background-color: salmon;
+	text-align: center;
+}
+
+.Nav {
+	grid-area: navbar;
+	background-color: #74bdcb;
+}
+
+.Nav-container {
+	list-style: none;
+	display: flex;
+	justify-content: flex-end;
+}
+
+.Nav-items {
+	margin: 1rem;
+}
+
+.Sidebar {
+	grid-area: sidebar;
+	background-color: lightgreen;
+}
+
+.AboutContainer {
+	grid-area: about-container;
+	background-color: lightpink;
+}
+
+.AboutMe {
+	grid-area: about-me;
+}
