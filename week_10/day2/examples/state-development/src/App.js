@@ -42,10 +42,6 @@ export default class App extends Component {
     // this is the built in function to manipulate any state variable
     // you will only use this.setState to change state.
   }
-
-
-  
-  
   render() {
     const { counter, title, itIsRainingInHouston, restaurants } = this.state
     return (
