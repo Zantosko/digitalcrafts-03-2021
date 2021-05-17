@@ -18,7 +18,7 @@ export default class Class extends Component {
   // setState, allows you ot access the state object
   render() {
     return (
-      <div>
+      <div style={{background: "green", height: "300px"}}>
         <h1>Class.js</h1>
         <p>this is the count {this.state.count}</p>
         <button onClick={() => this.setState({

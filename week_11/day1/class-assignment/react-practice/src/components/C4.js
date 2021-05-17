@@ -12,7 +12,7 @@ export default class C4 extends Component {
 
 
   render() {
-    const {value} = this.state
+    const { value } = this.state
     return (
       <div>
         <h1>Component 4</h1>
