@@ -21,15 +21,19 @@
 	background-color: #fff;
 	display: flex;
 	justify-content: space-between;
-	padding: 1rem;
+	padding: 0.8rem;
+}
+
+li:hover {
+	text-decoration: underline;
 }
 
 .left-nav li {
-	padding: 0.5rem;
+	padding: 0.6rem;
 }
 
 .right-nav li {
-	padding: 0.5rem;
+	padding: 0.6rem;
 }
 
 .nav-container {
