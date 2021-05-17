@@ -1,17 +1,17 @@
 //* #1
 //? Solution 1
-// const factorial = () => {
-//   let total = 1;
-//   let newTotal;
-//   for (let i = 1; i < num; i++) {
-//     newTotal = i * total;
-//     total += newTotal;
-//   }
+const factorial = () => {
+  let total = 1;
+  let newTotal;
+  for (let i = 1; i < num; i++) {
+    newTotal = i * total;
+    total += newTotal;
+  }
 
-//   return total;
-// }
+  return total;
+}
 
-// factorial(5)
+factorial(5)
 
 //? Solution 2
 function factorialize(num) {
