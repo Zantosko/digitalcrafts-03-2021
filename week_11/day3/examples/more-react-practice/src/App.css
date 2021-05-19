@@ -1,0 +1,28 @@
+.App {
+	font-family: sans-serif;
+	text-align: center;
+}
+
+.shipping-form-container {
+	background-color: springgreen;
+	padding: 3rem;
+	display: flex;
+	justify-content: center;
+}
+
+.shipping-form {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+
+.shipping-form input {
+	margin: 1rem;
+	padding: 10px;
+}
+
+.shipping-input-street,
+.shipping-input-apt,
+.shipping-input-button,
+.shipping-input-phone {
+	grid-column: 1/3;
+}
