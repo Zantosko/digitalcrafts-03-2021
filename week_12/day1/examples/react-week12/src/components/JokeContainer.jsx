@@ -7,7 +7,7 @@ export default function JokeContainer() {
 
   useEffect(() => {
     getJoke();
-  },[name]);
+  },[]);
 
   //* componentDidMount
   //? This triggers everytime the component is mounted.
@@ -40,7 +40,8 @@ export default function JokeContainer() {
   return (
     <div>
       <h1>JokeContainer</h1>
-      <Joke />
+      <Joke joke={joke}/>
+      <button onClick={() => getJoke()}>Change Joke</button>
     </div>
   )
 }
