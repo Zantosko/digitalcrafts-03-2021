@@ -10,3 +10,7 @@
 - App.js
 - Joke Container
 - Joke
+
+# React Router
+
+- <a> tags aren't controlled, they can go anywhere. This is where React Router comes into play.
