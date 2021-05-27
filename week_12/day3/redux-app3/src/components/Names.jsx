@@ -7,7 +7,7 @@ export default function Names() {
 
   return (
     <div>
-      <p>{list}</p>
+      <p>{list.map(listName => listName.name)}</p>
       <button onClick={()=> dispatch({type: "FILL"})}>Fill</button>
       <button onClick={()=> dispatch({type: "EMPTY"})}>Empty</button>
     </div>
