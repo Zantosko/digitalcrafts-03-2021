@@ -1,6 +1,11 @@
 import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 
+import {
+  changeName,
+  revertName
+} from '../actions/userActions'
+
 export default function User() {
   const username = useSelector(state => state.username);
   const dispactch = useDispatch();
@@ -8,8 +13,8 @@ export default function User() {
   return (
     <div>
       <p>{username}</p>
-      <button onClick={()=> dispactch({type: "CHANGE"})}>Change</button>
-      <button onClick={()=> dispactch({type: "REVERT"})}>Revert</button>
+      <button onClick={()=> changeName(dispactch)}>Change</button>
+      <button onClick={()=> revertName(dispactch)}>Revert</button>
     </div>
   )
 }
