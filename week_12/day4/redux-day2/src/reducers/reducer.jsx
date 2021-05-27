@@ -1,18 +1,49 @@
-import { INSERT_FAKE_JOE } from '../action-types/action-types';
+import {
+  INSERT_FAKE_JOE,
+  CHANGE_GOV_OFFICIAL,
+  REMOVE_DOGE_LORD,
+} from "../action-types/action-types";
 
 const initialState = {
-  fakeData: [{ username: "Zach", height: "8.0" }]
-}
+  fakeData: [{ userName: "🍒 Antosko", height: "8ft" }],
+  governmentOfficials: ["Mayor", "VP", "Secretary of Treasury"],
+  celebrities: [
+    {
+      name: "Elon Musk",
+    },
+    {
+      name: "Sam Elliot",
+    },
+    {
+      name: "Mark Zucky",
+    },
+  ],
+};
 
-const reducer = (state = initialState, action) => {
+// {username: "Joe", height: "7.1"}
+
+export const reducer = (state = initialState, action) => {
   switch (action.type) {
     case INSERT_FAKE_JOE:
-      return { fakeData: [{ username: "Joe", height: "7.1" }] }
+      return {
+        ...state,
+        fakeData: [{ userName: "Joe Schmoeee", height: "7.1" }],
+      };
+    case CHANGE_GOV_OFFICIAL:
+      return {
+        ...state,
+        governmentOfficials: [...state.governmentOfficials, "Senator"],
+      };
+    case REMOVE_DOGE_LORD:
+      const newCelebs = state.celebrities.filter(
+        (celebrity) => celebrity.name !== "Elon Musk"
+      );
 
+      return {
+        ...state,
+        celebrities: newCelebs,
+      };
     default:
-      return state
+      return state;
   }
-}
-
-
-export default reducer;
+};
