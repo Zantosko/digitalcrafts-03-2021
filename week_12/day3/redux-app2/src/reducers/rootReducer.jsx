@@ -9,6 +9,7 @@ const initialState = {
 
 function rootReducer(state = initialState, action) {
   switch (action.type) {
+    
     case CHANGE:
       return { username: "joe" }
 
