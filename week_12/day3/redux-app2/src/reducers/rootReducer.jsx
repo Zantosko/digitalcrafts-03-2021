@@ -1,24 +1,20 @@
-import {
-  CHANGE,
-  REVERT
-} from '../action-types/action-types';
+import { CHANGE, REVERT } from '../action-types/action-types';
 
 const initialState = {
-  username: "zach"
-}
+	username: 'zach',
+};
 
 function rootReducer(state = initialState, action) {
-  switch (action.type) {
-    
-    case CHANGE:
-      return { username: "joe" }
+	switch (action.type) {
+		case CHANGE:
+			return { username: 'joe' };
 
-    case REVERT:
-      return { username: "zach" }
+		case REVERT:
+			return { username: 'zach' };
 
-    default:
-      return state;
-  }
+		default:
+			return state;
+	}
 }
 
 export default rootReducer;
