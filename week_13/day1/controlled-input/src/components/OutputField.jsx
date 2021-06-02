@@ -1,13 +1,22 @@
 import React from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 
 export default function OutputField() {
+	const userInfo = useSelector(state => state.userInfo);
 	return (
-		<div>
+		<div className="form-container">
 			<form>
-				<input type="text" />
-				<input type="email" />
-				<button type="submit">Submit</button>
+				<input 
+					type="text"
+					value={userInfo.username}
+					disabled
+				/>
+				<input 
+					type="email"
+					value={userInfo.email}
+					disabled
+				/>
+				<button type="button">Clear</button>
 			</form>
 		</div>
 	);
