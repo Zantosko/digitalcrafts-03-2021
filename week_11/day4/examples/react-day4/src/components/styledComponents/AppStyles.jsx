@@ -4,7 +4,7 @@ export const AppStyle = styled.div`
   padding-top: 3rem;
   height: 110vh;
   width: 100vw;
-  color: white;
+  color: azure;
   background: linear-gradient(to right, #c9d6ff, #e2e2e2);
   font-family: sans-serif;
   display: flex;
