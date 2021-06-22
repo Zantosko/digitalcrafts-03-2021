@@ -1,0 +1,8 @@
+{
+	"compilerOptions": {
+		"target": "ESNext",
+		"watch": true,
+		"module": "commonjs"
+	},
+	"exclude": ["node_modules"]
+}
